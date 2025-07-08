@@ -1,10 +1,10 @@
 import prompt from "prompt";
-import { mainPrompt } from "./prompts/index.js";
+import { promptSchemaMain } from "./prompts-schema/index.js";
 import { createQrCode } from "./services/qrcode/index.js";
 import { createPassword } from "./services/password/index.js";
 
 async function main() {
-  prompt.get(mainPrompt, async (err, { select }) => {
+  prompt.get(promptSchemaMain, async (err, { select }) => {
     if (err) {
       console.log(err);
       return;
